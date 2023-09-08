@@ -21,8 +21,7 @@ pipeline {
                 failure{
                    mail to:"jasperjass2000@gmail.com",
                     subject:"Status of Build",
-                    body: "Unit and Integrations Failed",
-                    attachLog : true
+                    body: "Unit and Integrations Failed"
                 }
             }
         }
@@ -46,8 +45,7 @@ pipeline {
                 failure{
                    mail to:"jasperjass2000@gmail.com",
                     subject:"Status of Build",
-                    body: "Security scan Failed",
-                    attachLog : true
+                    body: "Security scan Failed"
                 }
             }
         }
