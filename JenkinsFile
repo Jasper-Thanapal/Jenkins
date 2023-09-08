@@ -14,15 +14,15 @@ pipeline {
             }
             post {
                 success{
-                    mail to:"jasperjass2000@gmail.com"
-                    subject:"Status of Build"
-                    body: "Unit and Integration Test was successful"
+                    mail to:"jasperjass2000@gmail.com",
+                    subject:"Status of Build",
+                    body: "Unit and Integration Test was successful",
                     attachLog : true
                 }
                 failure{
-                    mail to:"jasperjass2000@gmail.com"
-                    subject:"Status of Build"
-                    body: "Unit and Integration Failed"
+                    mail to:"jasperjass2000@gmail.com",
+                    subject:"Status of Build",
+                    body: "Unit and Integration Failed",
                     attachLog : true
                 }
             }
@@ -40,15 +40,15 @@ pipeline {
             }
             post {
                 success{
-                    mail to:"jasperjass2000@gmail.com"
-                    subject:"Status of Build"
-                    body: "Security scan was successful"
+                    mail to:"jasperjass2000@gmail.com",
+                    subject:"Status of Build",
+                    body: "Security scan was successful",
                     attachLog : true
                 }
                 failure{
-                    mail to:"jasperjass2000@gmail.com"
-                    subject:"Status of Build"
-                    body: "Security scan Failed"
+                    mail to:"jasperjass2000@gmail.com",
+                    subject:"Status of Build",
+                    body: "Security scan Failed",
                     attachLog : true
                 }
             }
