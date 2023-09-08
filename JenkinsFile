@@ -14,16 +14,20 @@ pipeline {
             }
             post {
                 success{
-                    mail to:"jasperjass2000@gmail.com",
-                    subject:"Status of Build",
-                    body: "Unit and Integration Test was successful",
-                    attachLog : true
+                   emailext(
+                            to: "jasperjass2000@gmail.com",
+                            subject: "Status of Build",
+                            body: "Unit and Integration Test was successful",
+                            attachLog: true
+                            )
                 }
                 failure{
-                    mail to:"jasperjass2000@gmail.com",
-                    subject:"Status of Build",
-                    body: "Unit and Integration Failed",
-                    attachLog : true
+                   emailext(
+                            to: "jasperjass2000@gmail.com",
+                            subject: "Status of Build",
+                            body: "Unit and Integration Failed",
+                            attachLog: true
+                            )
                 }
             }
         }
@@ -38,18 +42,22 @@ pipeline {
             steps {
                 echo "OpenVAS is used to do the security scan"
             }
-            post {
+           post {
                 success{
-                    mail to:"jasperjass2000@gmail.com",
-                    subject:"Status of Build",
-                    body: "Security scan was successful",
-                    attachLog : true
+                   emailext(
+                            to: "jasperjass2000@gmail.com",
+                            subject: "Status of Build",
+                            body: "Security scan was successful",
+                            attachLog: true
+                            )
                 }
                 failure{
-                    mail to:"jasperjass2000@gmail.com",
-                    subject:"Status of Build",
-                    body: "Security scan Failed",
-                    attachLog : true
+                   emailext(
+                            to: "jasperjass2000@gmail.com",
+                            subject: "Status of Build",
+                            body: "Security scan Failed",
+                            attachLog: true
+                            )
                 }
             }
         }
