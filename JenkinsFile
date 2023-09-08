@@ -26,7 +26,8 @@ to: "jasperjass2000@gmail.com",
 to: "jasperjass2000@gmail.com",
             subject: "Status of Build",
             body: "Unit and Integration Failed",
-            //attachLog: true )
+            //attachLog: true 
+)
 
                 }
             }
