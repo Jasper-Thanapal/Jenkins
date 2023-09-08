@@ -14,20 +14,15 @@ pipeline {
             }
             post {
                 success{
-                   emailext(
-                            to: "jasperjass2000@gmail.com",
-                            subject: "Status of Build",
-                            body: "Unit and Integration Test was successful",
-                            attachLog: true
-                            )
+                   mail to:"jasperjass2000@gmail.com",
+                    subject:"Status of Build",
+                    body: "Unit and Integration Tests was successful"
                 }
                 failure{
-                   emailext(
-                            to: "jasperjass2000@gmail.com",
-                            subject: "Status of Build",
-                            body: "Unit and Integration Failed",
-                            attachLog: true
-                            )
+                   mail to:"jasperjass2000@gmail.com",
+                    subject:"Status of Build",
+                    body: "Unit and Integrations Failed",
+                    attachLog : true
                 }
             }
         }
@@ -44,20 +39,15 @@ pipeline {
             }
            post {
                 success{
-                   emailext(
-                            to: "jasperjass2000@gmail.com",
-                            subject: "Status of Build",
-                            body: "Security scan was successful",
-                            attachLog: true
-                            )
+                   mail to:"jasperjass2000@gmail.com",
+                    subject:"Status of Build",
+                    body: "Security scan was successful"
                 }
                 failure{
-                   emailext(
-                            to: "jasperjass2000@gmail.com",
-                            subject: "Status of Build",
-                            body: "Security scan Failed",
-                            attachLog: true
-                            )
+                   mail to:"jasperjass2000@gmail.com",
+                    subject:"Status of Build",
+                    body: "Security scan Failed",
+                    attachLog : true
                 }
             }
         }
