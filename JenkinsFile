@@ -18,7 +18,7 @@ pipeline {
 to: "jasperjass2000@gmail.com",
             subject: "Status of Build",
             body: "Unit and Integration Test was successful",
-            attachLog: true
+            //attachLog: true
 )
                 }
                 failure{
@@ -26,7 +26,7 @@ to: "jasperjass2000@gmail.com",
 to: "jasperjass2000@gmail.com",
             subject: "Status of Build",
             body: "Unit and Integration Failed",
-            attachLog: true )
+            //attachLog: true )
 
                 }
             }
@@ -48,7 +48,7 @@ to: "jasperjass2000@gmail.com",
 to: "jasperjass2000@gmail.com",
             subject: "Status of Build",
             body: "Security scan was successful",
-            attachLog: true
+            //attachLog: true
 )
         
                 }
@@ -57,7 +57,7 @@ to: "jasperjass2000@gmail.com",
 to: "jasperjass2000@gmail.com",
             subject: "Status of Build",
             body: "Security scan Failed",
-            attachLog: true
+            //attachLog: true
 )
         
                 }
