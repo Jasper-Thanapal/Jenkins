@@ -15,7 +15,7 @@ pipeline {
             post {
                 success{
                    emailext (
-to: "jasperjass2000@gmail.com",
+to: "trissaan@gmail.com",
             subject: "Status of Build",
             body: "Unit and Integration Test was successful",
             //attachLog: true
@@ -23,7 +23,7 @@ to: "jasperjass2000@gmail.com",
                 }
                 failure{
                    emailext (
-to: "jasperjass2000@gmail.com",
+to: "trissaan@gmail.com",
             subject: "Status of Build",
             body: "Unit and Integration Failed",
             //attachLog: true 
@@ -46,7 +46,7 @@ to: "jasperjass2000@gmail.com",
            post {
                 success{
                    emailext (
-to: "jasperjass2000@gmail.com",
+to: "trissaan@gmail.com",
             subject: "Status of Build",
             body: "Security scan was successful",
             //attachLog: true
@@ -55,7 +55,7 @@ to: "jasperjass2000@gmail.com",
                 }
                 failure{
                    emailext(
-to: "jasperjass2000@gmail.com",
+to: "trissaan@gmail.com",
             subject: "Status of Build",
             body: "Security scan Failed",
             //attachLog: true
